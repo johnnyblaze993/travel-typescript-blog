@@ -1,7 +1,6 @@
 // import React from "react";
 //import the scss file
 import "./App.scss";
-import HomeHero from "./components/homeHero/HomeHero";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
 import Stories from "./pages/travel stories/Stories";

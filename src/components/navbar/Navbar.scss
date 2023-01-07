@@ -2,6 +2,64 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  height: 5vh;
   width: 100%;
+  padding: 0 1rem;
+  position: fixed;
+  z-index: 100;
+
+  h1 {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    margin-left: 1rem;
+  }
+  input {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: 1rem;
+    outline: none;
+    //on focus remove the border
+    &:focus {
+      border: none;
+    }
+  }
+
+  .btns {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    button {
+      font-weight: 600;
+      cursor: pointer;
+      //on hover scale the button
+      &:hover {
+        transform: scale(1.1);
+        //ease in and out
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}
+
+.primary-btn {
+  background: white;
+  color: black;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  //on hover change the background color to pink
+  &:hover {
+    background: #f040be;
+    transition: all 0.3s ease-in-out;
+  }
+}
+.secondary-btn {
+  background: none;
+  color: white;
+  border: none;
 }

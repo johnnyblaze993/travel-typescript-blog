@@ -1,0 +1,42 @@
+.photo {
+    width: 100%;
+    height: 45vh;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .swiper {
+        width: 100%;
+        height: 45vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .slide {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .location {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 1rem;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 500;
+        background-color: rgba(0, 0, 0, 0.5);
+        //border radius of bottom left corder at 5 px
+        border-bottom-left-radius: 5px;
+    }
+}

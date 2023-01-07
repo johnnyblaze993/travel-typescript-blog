@@ -1,12 +1,17 @@
-import React from "react";
+import PromotionBanner from "../../components/promotion banner/PromotionBanner";
+import "./Home.scss";
+import Hero from "./sections/Hero";
+import Suggestions from "./sections/Suggestions";
 
 const Home = () => {
   return (
-    <div>
-      <h1>
-        Find inspiration for your next vacation. Read travel stories and find
-        your next trip.
-      </h1>
+    <div className="home">
+      <Hero />
+      <Suggestions />
+      <div className="top-articles section">
+        <PromotionBanner />
+      </div>
+      <div className="subscribe section">section 4</div>
     </div>
   );
 };
