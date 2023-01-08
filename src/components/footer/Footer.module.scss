@@ -1,0 +1,44 @@
+@import '../../styles/global.module.scss';
+
+.container {
+    height: auto;
+    background-color: aquamarine;
+    @include flex-center-column;
+    padding: $padding;
+
+    @include tablet {
+        height: 20vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+
+    }
+
+
+}
+
+.maintext {
+    @include heading(1rem, $text-color);
+    align-self: flex-start;
+    margin-bottom: 5px;
+}
+
+.subtext {
+    @include text(.8rem);
+
+}
+
+.about {
+    @include flex-column;
+    height: 100%;
+    width: 100%;
+
+    @include tablet {
+        width: 33%;
+    }
+}
+
+.links {}
+
+.contact {}

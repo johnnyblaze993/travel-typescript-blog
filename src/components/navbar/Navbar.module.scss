@@ -1,0 +1,53 @@
+@import '../..//styles/global.module.scss';
+
+.container {
+  @include flex-space-between;
+  padding: $padding;
+  height: 5vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  background-color: $bg-color;
+
+  .maintext {
+    @include heading(1.5rem, $text-contrast)
+  }
+
+  input {
+    @include input;
+    display: none;
+    background-color: $darker-color;
+    color: $secondary-color;
+
+    //placeholder color
+    &::placeholder {
+      color: $secondary-color;
+    }
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  .navBtns {
+    @include flex-center;
+    gap: 5px;
+    width: 100%;
+
+    @include tablet {
+      width: 50%;
+    }
+
+    @include desktop {
+      width: 30%;
+    }
+  }
+}
+
+.primaryBtn {
+  @include button-primary
+}
+
+.secondaryBtn {
+  @include button-tertiary
+}

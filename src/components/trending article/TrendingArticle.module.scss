@@ -1,0 +1,73 @@
+@import '../../styles/global.module.scss';
+
+.container {
+    @include flex-center-column;
+    width: 100%;
+    height: 60vh;
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    @include tablet {
+        height: 55vh;
+        padding: $padding;
+    }
+
+    .window {
+        @include flex-column;
+        align-items: flex-start;
+        padding: .5rem;
+        font-size: x-small;
+        background-color: $quaternary-color;
+        color: $text-color;
+
+        transition: all 0.3s ease-in-out;
+        margin-bottom: 3rem;
+        align-self: flex-start;
+        border-radius: 5px;
+
+        @include tablet {
+            font-size: medium;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @include desktop {
+            font-size: large;
+            padding: 1.5rem;
+            margin-bottom: .5rem;
+        }
+
+    }
+
+    .cards {
+        margin-top: -2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: auto;
+    }
+
+    .button {
+        cursor: pointer;
+        border: none;
+    }
+
+    .primary {
+        @include button-primary;
+    }
+
+    .secondary {
+        @include button-tertiary;
+
+    }
+}

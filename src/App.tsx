@@ -8,6 +8,7 @@ import Vacations from "./pages/vacations/Vacations";
 
 //import routes and route
 import { Route, Routes } from "react-router-dom";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/vacations" element={<Vacations />} />
         <Route path="/stories" element={<Stories />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

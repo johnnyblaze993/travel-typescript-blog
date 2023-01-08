@@ -1,0 +1,39 @@
+@import "../../../../styles/global.module.scss";
+
+.heading {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 2rem;
+    align-self: flex-start;
+}
+
+.subtext {
+    @include text-secondary;
+
+    @include tablet {
+        font-size: 2rem;
+    }
+}
+
+.maintext {
+    @include heading(2.5rem, $text-color);
+    @include flex-center;
+    text-align: center;
+
+    //media queries
+    @include tablet {
+        font-size: 4rem;
+    }
+
+    @include desktop {
+        font-size: 5rem;
+    }
+}
+
+.container {
+    background-color: $bg-color;
+    @include flex-column;
+    padding: $padding;
+    padding-top: 9rem;
+    height: 100vh;
+}

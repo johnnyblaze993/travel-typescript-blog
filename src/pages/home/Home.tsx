@@ -1,17 +1,23 @@
 import PromotionBanner from "../../components/promotion banner/PromotionBanner";
-import "./Home.scss";
-import Hero from "./sections/Hero";
-import Suggestions from "./sections/Suggestions";
+import Subscribe from "../../components/subscribe/Subscribe";
+import TrendingArticle from "../../components/trending article/TrendingArticle";
+import styles from "./Home.module.scss";
+import Hero from "./home sections/hero/Hero";
+import Suggestions from "./home sections/suggestions/Suggestions";
 
 const Home = () => {
   return (
-    <div className="home">
+    <div className={styles.container}>
       <Hero />
+
       <Suggestions />
-      <div className="top-articles section">
+
+      <div className={`${styles.articles} ${styles.section}`}>
         <PromotionBanner />
+        <TrendingArticle />
       </div>
-      <div className="subscribe section">section 4</div>
+
+      <Subscribe />
     </div>
   );
 };

@@ -1,0 +1,225 @@
+// Global styles for the entire site
+
+
+$primary-color: #FC7A57;
+$secondary-color: #FCD757;
+$tertiary-color: #EEFC57;
+$quaternary-color: #DF9A57;
+$darker-color: #5E5B52;
+
+//typography
+$text-color: #0B0B09;
+$text-contrast: #FFFFFF;
+
+//background
+$bg-color: #F5F5F5;
+
+//padding
+$padding: 2rem;
+$input-padding: 0.5rem 1rem;
+
+//media queries
+$tablet: 768px;
+$mobile: 425px;
+$desktop: 1024px;
+
+//mixins
+
+//flexbox
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-center-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+//media queries
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+//buttons
+@mixin button($color) {
+    background-color: $color;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    color: $text-color;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin button-hover($color) {
+    &:hover {
+        background-color: $color;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+@mixin button-small ($color) {
+    background-color: transparent;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: $text-color;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: $color;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+@mixin button-primary {
+    @include button($primary-color);
+    @include button-hover($secondary-color);
+}
+
+@mixin button-secondary {
+    @include button($secondary-color);
+    @include button-hover($primary-color);
+}
+
+@mixin button-tertiary {
+    //include small button
+    @include button-small($tertiary-color);
+}
+
+//inputs
+@mixin input {
+    border: none;
+    padding: $input-padding;
+    border-radius: 5px;
+    color: $text-color;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:focus {
+        border: none;
+    }
+}
+
+
+
+//typography
+//headings
+@mixin heading($size, $color) {
+    font-size: $size;
+    font-weight: 700;
+    color: $color;
+}
+
+@mixin heading-primary {
+    @include heading(3rem);
+}
+
+@mixin heading-secondary {
+    @include heading(2rem);
+}
+
+//text
+@mixin text($size) {
+    font-size: $size;
+    color: $text-color;
+}
+
+@mixin text-primary {
+    @include text(1.5rem);
+}
+
+@mixin text-secondary {
+    @include text(1.2rem);
+}
+
+//photos
+@mixin bg-photo($url) {
+    background-image: url($url);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin photo-tint {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+}
+
+@export {
+    $primary-color: $primary-color,
+    $secondary-color,
+    $tertiary-color,
+    $quaternary-color,
+    $darker-color,
+    $text-color,
+    $text-contrast,
+    $bg-color,
+    $padding,
+    $input-padding,
+    flex-center,
+    flex-space-between,
+    flex-column,
+    flex-row,
+    flex-center-column,
+    flex-center-row,
+    mobile,
+    tablet,
+    button,
+    button-hover,
+    button-primary,
+    button-secondary,
+    heading,
+    heading-primary,
+    heading-secondary,
+    text,
+    text-primary,
+    text-secondary,
+    bg-photo,
+    photo-tint button-small,
+    button-tertiary,
+    input
+}

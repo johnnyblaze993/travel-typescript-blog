@@ -1,0 +1,44 @@
+ @import '../../../../styles/global.module.scss';
+
+ .container {
+     background-image: url("https://images.unsplash.com/photo-1518124880777-cf8c82231ffb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YnJlYXRodGFraW5nJTIwbGFuZHNjYXBlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60");
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-blend-mode: multiply;
+     background-color: rgba(0, 0, 0, 0.5);
+     position: relative;
+     height: 100vh;
+ }
+
+ .maintext {
+     @include heading(2rem, $text-contrast);
+     @include flex-center;
+     text-align: center;
+     height: 100%;
+
+     //media queries
+     @include tablet {
+         font-size: 4rem;
+     }
+
+     @include desktop {
+         font-size: 5rem;
+     }
+ }
+
+ .downArrow {
+     position: absolute;
+     bottom: 15%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     color: white;
+ }
+
+ .exploreBtn {
+     @include button-secondary;
+     position: absolute;
+     bottom: 30%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+ }
