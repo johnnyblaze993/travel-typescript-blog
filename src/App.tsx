@@ -4,7 +4,7 @@ import "./App.scss";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
 import Stories from "./pages/travel stories/stories container/Stories";
-import Vacations from "./pages/vacations/Vacations";
+import Vacations from "./pages/vacations/vacations container/Vacations";
 
 //import routes and route
 import { Route, Routes } from "react-router-dom";

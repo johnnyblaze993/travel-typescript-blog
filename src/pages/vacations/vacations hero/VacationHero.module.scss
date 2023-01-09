@@ -1,0 +1,10 @@
+@import '../../../styles/global.module.scss';
+
+.container {
+    padding: $padding;
+    @include flex-column;
+    background-color: $secondary-color;
+    height: 100vh;
+
+    position: relative;
+}

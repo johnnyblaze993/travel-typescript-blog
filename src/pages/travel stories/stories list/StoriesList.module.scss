@@ -1,0 +1,95 @@
+@import '../../../styles/global.module.scss';
+
+.container {
+    padding: $padding;
+    @include flex-column;
+    background-color: $secondary-color;
+
+    position: relative;
+
+
+    .input {
+        @include input;
+        margin-bottom: 2rem;
+    }
+
+    .searchIcon {
+        position: absolute;
+        top: 2.5rem;
+        right: 2rem;
+        color: $text-color;
+        cursor: pointer;
+    }
+}
+
+.stories {
+    @include flex-column;
+    gap: 2rem;
+}
+
+.story {
+    @include flex-row;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    padding: .5rem;
+
+    @include tablet {
+        gap: 3rem;
+    }
+}
+
+
+.img {
+    width: 7rem;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+
+    @include tablet {
+        width: 12rem;
+        height: auto;
+    }
+
+    @include desktop {
+        width: 15rem;
+        height: auto;
+    }
+}
+
+
+.storyinfo {
+    @include flex-column;
+    gap: .2rem;
+
+    @include tablet {
+        gap: 1rem;
+    }
+}
+
+.title {
+    @include heading(1rem, $text-color);
+    margin-bottom: 0;
+
+    @include tablet {
+        @include heading(1.5rem, $text-color);
+    }
+
+    @include desktop {
+        @include heading(2rem, $text-color);
+    }
+}
+
+.dateTimeFlex {
+    @include flex-row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.summary {
+    @include text(.7rem);
+
+    @include tablet {
+        @include text(1.2rem);
+    }
+}
