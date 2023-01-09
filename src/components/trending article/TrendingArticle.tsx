@@ -1,8 +1,10 @@
 import styles from "./TrendingArticle.module.scss";
 import ArticleCard from "../articlecard/ArticleCard";
 import { Paper } from "@mui/material";
+import { useNavigate } from "react-router";
 
 const TrendingArticle = () => {
+  const navigate = useNavigate();
   return (
     <div className={styles.container}>
       <Paper className={styles.window} elevation={6}>
@@ -16,7 +18,10 @@ const TrendingArticle = () => {
         <button className={`${styles.button} ${styles.secondary}`}>
           Read{" "}
         </button>
-        <button className={`${styles.button} ${styles.primary}`}>
+        <button
+          className={`${styles.button} ${styles.primary}`}
+          onClick={() => navigate("/stories")}
+        >
           View all
         </button>
       </div>

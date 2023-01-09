@@ -9,9 +9,7 @@
   z-index: 100;
   background-color: $bg-color;
 
-  .maintext {
-    @include heading(1.5rem, $text-contrast)
-  }
+
 
   input {
     @include input;
@@ -28,6 +26,7 @@
       display: block;
     }
   }
+
 
   .navBtns {
     @include flex-center;
@@ -50,4 +49,8 @@
 
 .secondaryBtn {
   @include button-tertiary
+}
+
+.homeBtn {
+  cursor: pointer;
 }

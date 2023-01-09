@@ -1,0 +1,81 @@
+@import '../../../styles/global.module.scss';
+
+.container {
+    padding: $padding;
+    background-color: $tertiary-color;
+    height: 75vh;
+    position: relative;
+    @include flex-center-column;
+
+
+    .input {
+        @include input;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+
+        @include tablet {
+            top: 2rem;
+            left: 2rem;
+        }
+
+        @include desktop {
+            top: 3rem;
+            left: 3rem;
+        }
+    }
+
+    .vacations {
+        @include flex-center-column;
+        gap: 2rem;
+        padding: 1rem;
+        width: 100%;
+
+        @include tablet {
+            @include flex-space-between;
+            flex-direction: row;
+            gap: 2rem;
+        }
+    }
+
+    .vacation {
+        @include flex-center-column;
+        width: 100%;
+        padding: .5rem;
+
+        @include tablet {
+            gap: 1.5rem;
+        }
+
+    }
+
+    .img {
+        width: 7rem;
+        height: 7rem;
+        object-fit: cover;
+        border-radius: 5px;
+
+        @include tablet {
+            width: 12rem;
+            height: 12rem;
+        }
+
+        @include desktop {
+            width: 15rem;
+            height: 15rem;
+        }
+    }
+
+    .title {
+        @include heading(1.1rem, $text-color);
+        text-align: center;
+
+        @include tablet {
+            @include heading(1.5rem, $text-color);
+        }
+
+        @include desktop {
+            @include heading(1.5rem, $text-color);
+        }
+    }
+}

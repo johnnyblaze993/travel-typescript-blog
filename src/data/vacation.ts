@@ -6,6 +6,7 @@ export type Vacation = {
   architecture: string;
   sightSee: string;
   food: string;
+  image: string;
 };
 
 const vacations: Vacation[] = [
@@ -21,6 +22,8 @@ const vacations: Vacation[] = [
     sightSee:
       "There are many things to see and do in Tokyo. Some popular tourist attractions include the Tokyo Tower, the Tokyo Disney Resort, and the Tokyo Metropolitan Government Building. The city is also home to many museums, such as the Tokyo National Museum and the National Museum of Emerging Science and Innovation. Additionally, visitors can take a walk through the bustling streets of Tokyo and visit one of the many shopping districts, such as Ginza or Shibuya. ",
     food: "Tokyo is known for its delicious and diverse food scene. Some popular Japanese dishes to try in Tokyo include sushi, ramen, and tempura. The city is also home to many Michelin-starred restaurants, such as Sukiyabashi Jiro and Kanda. In addition to Japanese cuisine, Tokyo has a wide variety of international restaurants, such as Italian, French, and Chinese. The city is also home to many food markets and street food vendors, where visitors can try a variety of local specialties.",
+    image:
+      "https://images.unsplash.com/photo-1585987983427-dfcfe63307d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTN8fHRva3lvfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=700&q=60",
   },
   {
     city: "Paris",
@@ -35,7 +38,10 @@ const vacations: Vacation[] = [
       "There are many things to see and do in Paris. Some popular tourist attractions include the Eiffel Tower, the Louvre Museum, and the Notre Dame Cathedral. Visitors can also take a stroll through the beautiful gardens of the Palace of Versailles or visit the Montmartre neighborhood, which is known for its bohemian atmosphere and stunning views of the city. Additionally, visitors can experience the city's vibrant nightlife by visiting one of the many bars or clubs in Paris.",
 
     food: "Paris is known for its culinary delights, and is home to many world-renowned restaurants and chefs. Some popular French dishes to try in Paris include croissants, escargot, and coq au vin. The city is also home to many markets, such as the Marché aux Enfants Rouges and the Marché d'Aligre, where visitors can try a variety of local specialties. Additionally, Paris is home to many wine bars and cafes, where visitors can enjoy a glass of wine or a cup of coffee while taking in the city's beautiful architecture and atmosphere.",
+    image:
+      "https://images.unsplash.com/photo-1584266337361-679ae80c8519?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGFyaXN8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60",
   },
+
   {
     city: "London",
     title: "Discover the Charm of London",
@@ -51,6 +57,8 @@ const vacations: Vacation[] = [
       "There are many things to see and do in London. Some popular tourist attractions include the Tower of London, Buckingham Palace, and the London Eye. Visitors can also take a stroll through the historic neighborhoods of London, such as Notting Hill and Mayfair, or visit one of the many markets and shops in the city. Additionally, visitors can experience London's vibrant nightlife by visiting one of the many bars or clubs in the city.",
 
     food: "London is known for its diverse and delicious food scene. The city is home to many Michelin-starred restaurants, such as The Fat Duck and The Ritz, as well as a wide variety of international cuisines. Some popular dishes to try in London include fish and chips, bangers and mash, and roast beef. The city is also home to many markets, such as Borough Market and Brick Lane Market, where visitors can try a variety of local specialties. Additionally, London is home to many pubs and cafes, where visitors can enjoy a pint of beer or a cup of tea while taking in the city's charming atmosphere.",
+    image:
+      "https://images.unsplash.com/photo-1605514449609-055803285148?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fGxvbmRvbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60",
   },
 ];
 export default vacations;

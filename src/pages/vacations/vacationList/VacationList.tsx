@@ -1,7 +1,27 @@
-import React from "react";
+import styles from "./VacationList.module.scss";
+import vacations from "../../../data/vacation";
+import { Paper } from "@mui/material";
 
 const VacationList = () => {
-  return <div>VacationList</div>;
+  return (
+    <div className={styles.container}>
+      <input
+        className={styles.input}
+        type="text"
+        placeholder="Search for a Vacation"
+      />
+      <div className={styles.vacations}>
+        {vacations.map((vacation) => (
+          <Paper className={styles.vacation} elevation={3}>
+            <img className={styles.img} src={vacation.image} alt="" />
+            <div className={styles.vacationinfo}>
+              <h3 className={styles.title}>{vacation.title}</h3>
+            </div>
+          </Paper>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default VacationList;

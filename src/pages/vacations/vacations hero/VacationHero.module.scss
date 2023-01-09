@@ -5,6 +5,25 @@
     @include flex-column;
     background-color: $secondary-color;
     height: 100vh;
-
+    @include bg-photo('https://images.unsplash.com/photo-1618083707368-b3823daa2726?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YWR2ZW50dXJlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=700&q=60');
+    @include photo-tint;
     position: relative;
+
+    .maintext {
+        @include heading(2rem, $text-contrast);
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+
+        @include tablet {
+            @include heading(3rem, $text-contrast);
+        }
+
+        @include desktop {
+            @include heading(4rem, $text-contrast);
+        }
+    }
 }
