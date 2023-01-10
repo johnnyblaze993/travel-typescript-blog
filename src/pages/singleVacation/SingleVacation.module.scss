@@ -1,0 +1,64 @@
+@import '../../styles/global.module.scss';
+
+.container {
+    height: auto;
+    @include flex-center-column;
+    gap: 1rem;
+    padding: $padding;
+
+
+
+}
+
+.img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 5px;
+
+}
+
+.city {
+    @include heading(1rem, $text-color);
+    align-self: flex-start;
+    margin-bottom: 5px;
+
+    //media
+    @include tablet {
+        @include heading(1.3rem, $text-color);
+    }
+
+    @include desktop {
+        @include heading(1.5rem, $text-color);
+    }
+}
+
+.title {
+    @include heading(1rem, $text-color);
+    align-self: flex-start;
+    margin-bottom: 2rem;
+
+    @include tablet {
+        @include heading(1.5rem, $text-color);
+    }
+
+    @include desktop {
+        @include heading(2rem, $text-color);
+    }
+}
+
+.maintext {
+    @include heading(.9rem, $text-color);
+    align-self: flex-start;
+    margin-bottom: 5px;
+    line-height: 1.5;
+
+    //media
+    @include tablet {
+        @include heading(1.3rem, $text-color);
+    }
+
+    @include desktop {
+        @include heading(1.5rem, $text-color);
+    }
+}
